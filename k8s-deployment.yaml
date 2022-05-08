@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: go-server-container
-        image: iaizawa0623/go_http_server:v7
+        image: iaizawa0623/go_http_server:v8
         resources:
           limits:
             memory: 512Mi
