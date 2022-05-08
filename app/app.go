@@ -1,3 +1,4 @@
+// HTTP server that returns a local IP address
 package main
 
 import (
