@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/bin/sh 
 
 url="localhost"
 status=`curl $url -o /dev/null -w '%{http_code}\n' -s`
