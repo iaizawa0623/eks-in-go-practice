@@ -1,19 +1,19 @@
-# A simple example of ClusterConfig object:
----
 apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
 metadata:
   name: eks-cluster
-  region: ap-norheast-1
+  region: ap-northeast-1
+
+availabilityZones: ["ap-northeast-1a", "ap-northeast-1c", "ap-northeast-1d"]
 
 nodeGroups:
   - name: ng-1
     instanceType: t3a.nano
-    desiredCapacity: 1
-  - name: ng-2
-    instanceType: t3a.nano
-    desiredCapacity: 1
-  - name: ng-3
-    instanceType: t3a.nano
-    desiredCapacity: 1
+    desiredCapacity: 3
+    minSize: 3
+    maxSize: 10
+    iam:
+      withAddonPolicies:
+        autoScaler: true
+        awsLoadBalancerController: true
