@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: go-server-deployment
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: go-server
@@ -14,13 +14,13 @@ spec:
     spec:
       containers:
       - name: go-server-container
-        image: iaizawa0623/go_http_server:v8
+        image: iaizawa0623/go_http_server:arm64v1
         resources:
-          limits:
-            memory: 512Mi
-            cpu: 1000m
           requests:
-            memory: 16Mi
-            cpu: 200m
+            cpu: 100m
+            memory: 512Mi
+          limits:
+            cpu: 2000m
+            memory: 1024Mi
         ports:
         - containerPort: 80
