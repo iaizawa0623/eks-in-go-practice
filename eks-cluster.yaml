@@ -2,18 +2,21 @@ apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
 metadata:
-  name: eks-cluster
+  name: arm64-cluster
   region: ap-northeast-1
 
 availabilityZones: ["ap-northeast-1a", "ap-northeast-1c", "ap-northeast-1d"]
 
 nodeGroups:
   - name: ng-1
-    instanceType: t3a.nano
-    desiredCapacity: 3
-    minSize: 3
-    maxSize: 10
+    instanceType: t4g.small
+    desiredCapacity: 1
+    minSize: 1
+    maxSize: 3
     iam:
       withAddonPolicies:
         autoScaler: true
         awsLoadBalancerController: true
+
+#fargateProfiles:
+#  - name: fp-1
