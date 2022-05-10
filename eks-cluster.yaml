@@ -5,6 +5,10 @@ metadata:
   name: arm64-cluster
   region: ap-northeast-1
 
+vpc:
+  nat:
+    gateway: Disable # other options: HighlyAvailable, Disable, Single (default)
+
 availabilityZones: ["ap-northeast-1a", "ap-northeast-1c", "ap-northeast-1d"]
 
 nodeGroups:
