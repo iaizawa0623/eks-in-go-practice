@@ -11,5 +11,5 @@ kubectl apply -R -f k8s/
 ## Release resources
 ```
 eksctl get cluster
-eksctl delete cluster --name=${CLUSTER NAME}
+eksctl delete cluster --wait --name=${CLUSTER NAME}
 ```
