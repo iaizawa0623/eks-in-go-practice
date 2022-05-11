@@ -148,11 +148,11 @@ spec:
           name: cluster-autoscaler
           resources:
             limits:
-              cpu: 100m
-              memory: 600Mi
+              cpu: 2000m
+              memory: 2048Mi
             requests:
-              cpu: 100m
-              memory: 600Mi
+              cpu: 500m
+              memory: 512Mi
           command:
             - ./cluster-autoscaler
             - --v=4

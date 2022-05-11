@@ -17,10 +17,10 @@ spec:
         image: iaizawa0623/go_http_server:arm64v1
         resources:
           requests:
-            cpu: 100m
-            memory: 512Mi
+            cpu: 200m
+            memory: 256Mi
           limits:
-            cpu: 2000m
-            memory: 1024Mi
+            cpu: 1000m
+            memory: 512Mi
         ports:
         - containerPort: 80
