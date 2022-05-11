@@ -4,12 +4,12 @@ goとかk8sとかamazon eksの練習
 
 ## Service Deployment
 ```
-eksctl create cluster -f eks-cluster.yaml
+eksctl create cluster -f amd64-cluster.yaml
 kubectl apply -R -f k8s/
 ```
 
 ## Release resources
 ```
 eksctl get cluster
-eksctl delete cluster --wait --name=${CLUSTER NAME}
+eksctl delete cluster --wait --name=amd64-cluster.yaml
 ```
